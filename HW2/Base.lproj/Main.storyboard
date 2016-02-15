@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sxX-N9-2bO">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPA-pA-8GD">
+                                <rect key="frame" x="252" y="103" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Kb7-ma-sR0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOz-tL-kri">
+                                <rect key="frame" x="252" y="155" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2f7-Yc-pys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwI-5g-Nea">
+                                <rect key="frame" x="251" y="224" width="98" height="30"/>
+                                <state key="normal" title="Generate text!"/>
+                                <connections>
+                                    <action selector="sayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mwj-di-Skz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Placeholder text, replace me!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AhA-8M-4Mw">
+                                <rect key="frame" x="180" y="266" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CwI-5g-Nea" firstAttribute="top" secondItem="IOz-tL-kri" secondAttribute="bottom" constant="30" id="5T7-Ew-A8b"/>
+                            <constraint firstItem="XPA-pA-8GD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="Eu7-u3-65r"/>
+                            <constraint firstItem="AhA-8M-4Mw" firstAttribute="top" secondItem="CwI-5g-Nea" secondAttribute="bottom" constant="20" id="Ymu-n6-06w"/>
+                            <constraint firstItem="CwI-5g-Nea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ef6-vv-LQY"/>
+                            <constraint firstItem="IOz-tL-kri" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="evZ-AU-lRq"/>
+                            <constraint firstItem="IOz-tL-kri" firstAttribute="top" secondItem="XPA-pA-8GD" secondAttribute="bottom" constant="20" id="hlv-yz-86f"/>
+                            <constraint firstItem="XPA-pA-8GD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rQr-Z1-npV"/>
+                            <constraint firstItem="AhA-8M-4Mw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z5q-Yj-Xe5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dh1-hj-my0">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="ZJw-yw-E1x">
+                            <connections>
+                                <segue destination="MxR-mE-gz4" kind="show" id="cob-2L-zuz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputAge" destination="IOz-tL-kri" id="BKA-zO-Lky"/>
+                        <outlet property="inputName" destination="XPA-pA-8GD" id="xCN-eG-AYt"/>
+                        <outlet property="outputLabel" destination="AhA-8M-4Mw" id="oQ1-Bc-gyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="An7-DY-6hH">
+            <objects>
+                <viewController id="MxR-mE-gz4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E2m-Pa-L9P"/>
+                        <viewControllerLayoutGuide type="bottom" id="urK-0w-4Fs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xnI-5K-KOx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RSb-eK-tBE">
+                                <rect key="frame" x="252" y="102" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="KuG-Lu-wTi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Number here" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="H22-c4-5gd">
+                                <rect key="frame" x="180" y="149" width="240" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lt-IH-vtc">
+                                <rect key="frame" x="285" y="215" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This View Controller is giving me a locked UIViewController.h that I can't add code to." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jp4-4B-88D">
+                                <rect key="frame" x="180" y="288" width="240" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8D-LO-RCT">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="Ree-Bn-9RK">
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="dSW-Yd-Som">
+                                            <connections>
+                                                <segue destination="qdc-Oh-6RJ" kind="show" id="yr4-Ru-oH7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H22-c4-5gd" firstAttribute="centerX" secondItem="xnI-5K-KOx" secondAttribute="centerX" id="HCk-GU-Lg5"/>
+                            <constraint firstItem="6lt-IH-vtc" firstAttribute="centerX" secondItem="xnI-5K-KOx" secondAttribute="centerX" id="NKh-SS-54A"/>
+                            <constraint firstItem="H22-c4-5gd" firstAttribute="top" secondItem="RSb-eK-tBE" secondAttribute="bottom" constant="10" id="Ti9-Ri-3wy"/>
+                            <constraint firstItem="RSb-eK-tBE" firstAttribute="centerX" secondItem="xnI-5K-KOx" secondAttribute="centerX" id="XOI-Eu-3iD"/>
+                            <constraint firstItem="RSb-eK-tBE" firstAttribute="top" secondItem="E2m-Pa-L9P" secondAttribute="bottom" constant="50" id="c5b-aJ-ATQ"/>
+                            <constraint firstItem="6lt-IH-vtc" firstAttribute="top" secondItem="H22-c4-5gd" secondAttribute="bottom" constant="25" id="g5E-qy-Byf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zh-8C-YsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757" y="429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="n0d-4J-XVs">
+            <objects>
+                <viewController id="qdc-Oh-6RJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wxv-L8-DJl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zPv-xn-nPx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e2E-DK-X2d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-oF-2bn">
+                                <rect key="frame" x="252" y="74" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Should print &quot;is even&quot; or &quot;is not even&quot;" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="14Q-Lm-tb5">
+                                <rect key="frame" x="165" y="137" width="267" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMj-91-xJ4">
+                                <rect key="frame" x="268" y="213" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This View Controller is giving me a locked UIViewController.h that I can't add code to." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-XP-weP">
+                                <rect key="frame" x="160" y="299" width="267" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BEy-oF-2bn" firstAttribute="centerX" secondItem="e2E-DK-X2d" secondAttribute="centerX" id="Drl-Vy-e3f"/>
+                            <constraint firstItem="SMj-91-xJ4" firstAttribute="top" secondItem="14Q-Lm-tb5" secondAttribute="bottom" constant="20" id="F5u-Jm-X6c"/>
+                            <constraint firstItem="SMj-91-xJ4" firstAttribute="centerX" secondItem="e2E-DK-X2d" secondAttribute="centerX" id="HjD-BQ-zL7"/>
+                            <constraint firstItem="14Q-Lm-tb5" firstAttribute="centerX" secondItem="e2E-DK-X2d" secondAttribute="centerX" id="Z7h-Fp-zjT"/>
+                            <constraint firstItem="BEy-oF-2bn" firstAttribute="top" secondItem="wxv-L8-DJl" secondAttribute="bottom" constant="100" id="auS-Hj-7E9"/>
+                            <constraint firstItem="14Q-Lm-tb5" firstAttribute="top" secondItem="BEy-oF-2bn" secondAttribute="bottom" constant="20" id="z8B-TJ-efR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LmR-LP-k64" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2440" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EH9-z4-cCH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sxX-N9-2bO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DqC-5m-7Qi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dxZ-gR-S0W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0p-Fi-Db1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337" y="429"/>
+        </scene>
+    </scenes>
+</document>
